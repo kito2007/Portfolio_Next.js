@@ -41,7 +41,7 @@ export default function ProjectItem({ data }) {
                 </p>
                 <div className="flex items-start mt-2">
                     {projectTag.map((tag) => (
-                        <h1 className="px-2 py-1 mr-2 rounded-md bg-sky-200 bg-sky-700 w-30" key={tag.id}>{tag.name}</h1>
+                        <h1 className="px-2 py-1 mr-2 rounded-md bg-sky-200 dark:bg-sky-700 w-30" key={tag.id}>{tag.name}</h1>
                     ))}
                 </div>
             </div>
