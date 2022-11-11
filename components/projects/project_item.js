@@ -29,7 +29,7 @@ export default function ProjectItem({ data }) {
 
     return (
         <div className="project-card">
-            <Image className="rounded-t-md" src={coverimg} alt="cover image" width="100%" height="50%" layout="responsive" objectFit="cover" quality={100} />
+            <Image className="rounded-t-lg" src={coverimg} alt="cover image" width="100%" height="60%" layout="responsive" objectFit="cover" quality={100} />
             <div className="p-4">
                 <h1 className="text-2xl font-bold">{projectTitle}</h1>
                 <h3 className="mt-4 text-xl">
@@ -37,7 +37,7 @@ export default function ProjectItem({ data }) {
                 </h3>
                 <a href={projectGithub}>깃허브 바로가기</a>
                 <p className="my-1">
-                    작업기간 : {startDate} ~ {endDate} {calculatedPeriod(startDate, endDate)}일
+                    작업기간 : {startDate} ~ {endDate}, {calculatedPeriod(startDate, endDate)}일
                 </p>
                 <div className="flex items-start mt-2">
                     {projectTag.map((tag) => (
