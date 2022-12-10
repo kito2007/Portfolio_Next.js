@@ -28,9 +28,8 @@ export default function Projects({ projects }) {
                         <div>
                             <button onClick={showModal}>
                                 <ProjectItem key={aProjects.id} data={aProjects} />
-                
+                                {modalOpen && <Projectmodal key={aProjects.id} data = {aProjects} setOpenBool={setOpenBool} />}
                             </button>
-                            {modalOpen && <Projectmodal setOpenBool={setOpenBool} />}
                         </div>
                     ))}
                 </div>
