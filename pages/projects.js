@@ -23,6 +23,9 @@ export default function Projects({ projects }) {
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
                 <h1 className="text-4xl font-bold sm:text-6xl">프로젝트 : <span className="pl-4 text-blue-500">{projects.results.length}</span></h1>
+                <input class="placeholder:italic placeholder:text-slate-400 block w-1/2 border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="찾고 싶은 프로젝트 이름" type="text" name="search" />
+
+                <button className="mt-3" type="submit">버튼</button>
                 <div className="grid grid-cols-1 gap-8 p-12 m-4 md:grid-cols-2">
                     {projects.results.map((aProjects) => (
                         <div key={aProjects.id}>
