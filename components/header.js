@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Script from "next/script";
 import DarkModeToggleButton from "./dark-mode-toggle-button";
 
 export default function Header() {
@@ -26,8 +27,16 @@ export default function Header() {
                         </Link>
                     </nav>
                     {/*need creating dark mode toggle button*/}
-                    <DarkModeToggleButton/>
+                    <DarkModeToggleButton />
                 </div>
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-8JB2T1Q0TS"></script>
+                <script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments)}
+                    gtag('js', new Date());
+
+                    gtag('config', 'G-8JB2T1Q0TS');
+                </script>
             </header>
         </>
     );
