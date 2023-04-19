@@ -26,10 +26,7 @@ export default function Projects({ projects }) {
                 <div className="grid grid-cols-1 gap-8 p-12 m-4 md:grid-cols-2">
                     {projects.results.map((aProjects) => (
                         <div>
-                            <button onClick={showModal}>
-                                <ProjectItem key={aProjects.id} data={aProjects} />
-                                {modalOpen && <Projectmodal key={aProjects.id} data = {aProjects} setOpenBool={setOpenBool} />}
-                            </button>
+                            <ProjectItem key={aProjects.id} data={aProjects} />
                         </div>
                     ))}
                 </div>

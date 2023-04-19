@@ -36,24 +36,6 @@ export default function Projectmodal({ data, setOpenBool, id, title, content, wr
             <button className="modal-close" onClick={close}>
                 X
             </button>
-            <div className="project-card">
-                <Image className="rounded-t-lg" src={coverimg} alt="cover image" width="100%" height="60%" layout="responsive" objectFit="cover" quality={100} />
-                <div className="p-4">
-                    <h1 className="text-2xl font-bold">{projectTitle}</h1>
-                    <h3 className="mt-4 text-xl">
-                        {des}
-                    </h3>
-                    <a href={projectGithub}>깃허브 바로가기</a>
-                    <p className="my-1">
-                        작업기간 : {startDate} ~ {endDate}, {calculatedPeriod(startDate, endDate)}일
-                    </p>
-                    <div className="flex items-start mt-2">
-                        {projectTag.map((tag) => (
-                            <h1 className="px-2 py-1 mr-2 rounded-md bg-sky-200 dark:bg-sky-700 w-30" key={tag.id}>{tag.name}</h1>
-                        ))}
-                    </div>
-                </div>
-            </div>
         </div>
     );
 }
