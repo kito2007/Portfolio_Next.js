@@ -62,7 +62,7 @@ export async function getStaticProps() {
     const res = await fetch(`https://api.notion.com/v1/databases/${DATABASE_ID}/query`, options)
 
     const projects = await res.json()
-
+    console.log(projects)
     const projectsNames = projects.results.map((aProjects) => (
         aProjects.properties.이름.title[0].plain_text
     ))

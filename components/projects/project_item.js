@@ -4,7 +4,7 @@ export default function ProjectItem({ data }) {
 
     const projectTitle = data.properties.이름.title[0].plain_text
     const projectTag = data.properties.태그.multi_select
-    const projectGithub = data.properties.Github.url
+    const projectGithub = data.properties.Link.url
     const des = data.properties.Description.rich_text[0].plain_text
     const coverimg = data.cover.external.url
     const startDate = data.properties.날짜.date.start
@@ -35,7 +35,7 @@ export default function ProjectItem({ data }) {
                 <h3 className="mt-4 text-xl">
                     {des}
                 </h3>
-                <a href={projectGithub}>깃허브 바로가기</a>
+                <a href={projectGithub}>링크</a>
                 <p className="my-1">
                     작업기간 : {startDate} ~ {endDate}, {calculatedPeriod(startDate, endDate)}일
                 </p>
